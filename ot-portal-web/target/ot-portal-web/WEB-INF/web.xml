@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+  </welcome-file-list>
+
+  <!-- 解决post乱码 -->
+  <filter>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>
+    <init-param>
+      <param-name>encoding</param-name>
+      <param-value>utf-8</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>CharacterEncodingFilter</filter-name>
+    <url-pattern>/*</url-pattern>
+  </filter-mapping>
+
+
+
+  <!-- springmvc的前端控制器 -->
+  <servlet>
+    <servlet-name>ot-portal</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+    <!-- contextConfigLocation不是必须的， 如果不配置contextConfigLocation， springmvc的配置文件默认在：WEB-INF/servlet的name+"-servlet.xml" -->
+    <init-param>
+      <param-name>contextConfigLocation</param-name>
+      <param-value>classpath:spring/springmvc.xml</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ot-portal</servlet-name>
+    <!--url-pattern为/时，会拦截所有请求，这个时候你在@Controller接口上的类又没有对@RequestMapping的处理方法，所以就会出现找不到的情况-->
+    <!--这时候需要在springmvc.xml里面加上静态资源的映射-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+  <!--.jsp能过/不能过/*,/和/*都会拦截除了jsp以外的所有静态资源-->
+  <!--关于/和/*很重要的知识点：路径匹配原则与查找顺序：优先级为：精准路径> /* > *.do > / -->
+  <!--当url-pattern配置为/时，此时如果url来了一个请求localhost:8080/index.jsp时，spring mvc会自动去除上下文的路径，得到/index.jsp，先在web.xml中查找有没有这个路径，
+  发现没有后，则返回tomcat的conf文件夹下的web.xml中寻找，因为tomcat的web.xml里面配置了url-pattern为.jsp和.jspx的处理办法，且该优先级高于/的优先级，所以自动绑定了
+  tomcat的web.xml的处理办法，将在webapp目录下但不在WEB-INF目录下的index.jsp页面返回。但是由于.html .js .css的在tomcat默认的web.xml中没有配置，所以都会查找不到，此时/index.jsp只好选择最低优先级的/，与它的dispatcherServelt
+  进行绑定，并在springmvc.xml中寻找与之对应的方法，如果在springmvc.xml中配置了资源映射，那么还能找到，不然就是404，如果webapp中没有index.jsp页面时，是会报空的，因为
+  它没有权限访问到web-inf目录下的index.jsp，但你如果在浏览器中只输入localhost:8080/，那么自动匹配到dispatcherServelt后，如果你有requestMapping("/")，返回一个字符串
+  "index"，根据视图解析器，就可以访问到web-inf目录下面的index.jsp了-->
+  <!--关于/*，由于它的优先级只低于精准路径匹配，所以在web.xml文件中如果遇到了/*，那么先在tomcat的con文件夹下里面的web.xml里面寻找精准路径匹配，如果没有找到精准路径匹配
+  ，根据优先级，则会自动绑定/*的dispatcherServlet，然后去springmvc.xml里面找对应的，如果没有，则404-->
+</web-app>

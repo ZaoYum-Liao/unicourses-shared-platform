@@ -1,0 +1,3 @@
+com\ourTeam\portal\web\controller\CourseController.class
+com\ourTeam\portal\web\controller\SsoServiceController.class
+com\ourTeam\portal\web\controller\CookieUtils.class
