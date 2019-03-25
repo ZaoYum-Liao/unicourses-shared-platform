@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--这边会飘红是因为你在dao的配置文件里面没有写入mybatis逆向生成所用到的依赖包-->
+
+<!DOCTYPE generatorConfiguration  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context targetRuntime="MyBatis3" id="testTables">
+
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property value="true" name="suppressAllComments"/>
+        </commentGenerator>
+
+        <!--数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <jdbcConnection password="admin" userId="root"     connectionURL="jdbc:mysql://localhost:3306/teamcourse" driverClass="com.mysql.jdbc.Driver"> </jdbcConnection>
+
+        <!-- 默认false，把JDBC DECIMAL 和 NUMERIC 类型解析为 Integer，为 true时把JDBC DECIMAL 和 NUMERIC 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <property value="false" name="forceBigDecimals"/>
+        </javaTypeResolver>
+
+        <!-- targetProject:生成PO类的位置，即根据对应的数据库中的表生成对应的javabean的位置 -->
+        <javaModelGenerator targetProject="H:\20190309\ourTeam\ot-manager\ot-manager-pojo\src\main\java" targetPackage="com.ourTeam.manager.pojo">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property value="false" name="enableSubPackages"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property value="true" name="trimStrings"/>
+        </javaModelGenerator>
+
+        <!-- targetProject:mapper映射文件生成的位置 -->
+        <sqlMapGenerator targetProject=".\src\main\resources" targetPackage="mapper">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property value="false" name="enableSubPackages"/>
+        </sqlMapGenerator>
+
+        <!-- targetPackage：java代理生成的位置，即dao生成的位置-->
+        <javaClientGenerator targetProject="H:\20190309\ourTeam\ot-manager\ot-manager-dao\src\main\java" targetPackage="com.ourTeam.manager.dao" type="XMLMAPPER">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property value="false" name="enableSubPackages"/>
+        </javaClientGenerator>
+
+
+        <!--指定数据库表-->
+        <!--
+
+            <table tableName="course_info" schema=""/>
+            <table tableName="sch_course" schema=""/>
+        -->
+        <table tableName = "user_course" schema=""/>
+    </context>
+
+</generatorConfiguration>

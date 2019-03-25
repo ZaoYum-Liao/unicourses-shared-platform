@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"
+	   xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd 
+	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/util 
+	http://www.springframework.org/schema/util/spring-util-4.0.xsd http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+	
+	<context:component-scan base-package="com.ourTeam.search"></context:component-scan>
+	
+	<!-- 单机版的solr客户端 -->
+	<bean id="httpSolrServer" class="org.apache.solr.client.solrj.impl.HttpSolrServer">
+		<constructor-arg name="baseURL" value="http://129.211.12.209:8085/solr"></constructor-arg>
+	</bean>
+
+	<dubbo:application name="ot-content" />
+	<!--连接注册中心，注册中心的地址是服务的调用者和提供者都知道的，相当于房产中介的电话号码，房东和租房子的都知道-->
+	<dubbo:registry protocol="zookeeper"
+					address="192.168.25.144:2181" />
+	<!-- 用dubbo协议在20880端口暴露服务，这个就相当于房东的地址或者联系电话，当租房子的在注册中心询问时，就会把这个地址暴露给他，就可以调用里面的方法了-->
+	<dubbo:protocol name="dubbo" port="20882" />
+	<dubbo:service interface="com.ourTeam.search.SearchService" ref="searchServiceImpl"/>
+</beans>

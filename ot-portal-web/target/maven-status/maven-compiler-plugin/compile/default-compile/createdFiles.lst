@@ -1,0 +1,7 @@
+com\ourTeam\portal\web\controller\CourseInfoController.class
+com\ourTeam\portal\web\controller\CourseController.class
+com\ourTeam\portal\web\controller\SearchController.class
+com\ourTeam\portal\web\controller\SsoServiceController.class
+com\ourTeam\portal\web\controller\CookieUtils.class
+com\ourTeam\portal\web\controller\UserCenterController.class
+com\ourTeam\portal\web\controller\CourseInfoAndUserCourse.class

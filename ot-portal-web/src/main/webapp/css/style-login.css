@@ -1,0 +1,263 @@
+/* body閮ㄥ垎鐨勬牱寮忥紝鐢ㄥ浘鐗囦綔涓鸿儗鏅�*/
+body{
+	/*background-image: url(./445681.jpg) ;*/
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+a{
+	text-decoration: none;
+}
+.vary{
+	position:absolute;
+	margin-top:-75px;
+	margin-left:180px;
+}
+.vary h3{
+	color:#FF3030;
+	font-size: inherit;
+}
+/*提示框中的文字的样式*/
+.error{
+	color: #dc5d00;
+	font-weight: normal;
+	margin-left: 10px;
+}
+#wrapper{
+	width: 60%;
+	right: 0px;
+	min-height: 560px;	
+	margin: 0px auto;	
+	width: 500px;
+	position: relative;	
+	
+}
+
+#wrapper a{
+	color: rgb(95, 155, 198);
+	text-decoration: none;
+}
+
+#wrapper h1{
+	font-size: 48px;
+	color: cadetblue;
+	padding: 2px 0 10px 0;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+#wrapper p{
+	margin-bottom:15px;
+	width: 95%;
+}
+#wrapper p:first-child{
+	margin: 0px;
+}
+#wrapper label{
+	color:darkslategray;
+	position: relative;
+	
+}
+::-webkit-input-placeholder  { 
+	color: rgb(190, 188, 188); 
+	font-style: italic;
+}
+
+#wrapper input:not([type="checkbox"]){
+	width: 92%;
+	margin-top: 4px;
+	padding: 10px 5px 10px 32px;	
+	border: 1px solid rgb(178, 178, 178);
+	box-sizing : content-box;
+	border-radius: 3px;
+	box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+	transition: all 0.2s linear;
+}
+
+#wrapper p.button input{
+	    width: 100%;
+    cursor: pointer;
+    background: rgb(61, 157, 179);
+    padding: 8px 5px;
+    pading-top:3px;
+    font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
+    color: #fff;
+    font-size: 20px;
+    border: 1px solid rgb(28, 108, 122);
+    margin-bottom: 9px;
+    margin-top: 15px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    height: 27px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0px 0px 0px 3px rgb(254, 254, 254), 0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+ 0px 0px 0px 3px rgb(254, 254, 254),
+ 0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset, 0px 0px 0px 3px rgb(254, 254, 254), 0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+
+#wrapper p.button input:active,
+#wrapper p.button input:focus{
+	background: rgb(112, 208, 224);
+	position: relative;
+	top: 1px;
+	border: 1px solid rgb(12, 76, 87);	
+	box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+}
+
+
+.keeplogin{
+	margin-top: -5px;
+}
+.keeplogin input,
+.keeplogin label{
+	display: inline-block;
+	float: left;
+	font-size: 12px;	
+	font-style: italic;
+}
+.keeplogin input#loginkeeping{
+	width:13px;
+	margin-right: 3px;
+}
+.keeplogin label{
+	float: initial;
+	width: 80%;
+	margin-top:0px;
+}
+.changePassword a{
+	text-align: center;
+	width: 60px;
+    height: 20px;
+    float: right;
+    margin: -40px 0px 0px 0px;
+    color: #000000;
+}
+.changePassword a:hover {
+	color: rgb(57, 191, 215);
+	background: rgb(247, 247, 247);
+	
+}
+.remeber{
+	position: absolute;
+    margin-left: -16px;
+    margin-top: 30px;
+    padding: 2px 5px 5px 5px;
+    border: 1px solid rgb(178, 178, 178);
+    box-sizing: content-box;
+    border-radius: 3px;
+    box-shadow: 0px 1px 4px 0px rgba(168, 168, 168, 0.6) inset;
+    transition: all 0.2s linear;
+    color: cadetblue;
+}
+
+
+/*鐧诲綍鍜屾敞鍐岀殑杞崲 */
+
+p.change_link{
+	position: absolute;
+	color: rgb(127, 124, 124);
+	left: 0px;
+	height: 20px;
+	width: 440px;
+	padding: 17px 15px 20px 30px;
+	font-size: 16px	;
+	text-align: right;
+	border-radius: 0 0  5px 5px;
+	
+}
+#wrapper p.change_link a {
+	padding: 2px 4px 2px 4px;
+	display: inline-block;
+	font-weight: bold;
+	background: rgb(247, 248, 241);
+	padding: 4px 10px;
+	color: rgb(29, 162, 193);
+	text-decoration: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 1px solid rgb(203, 213, 214);
+	-webkit-transition: all 0.4s linear;
+	-moz-transition: all 0.4s  linear;
+	-o-transition: all 0.4s linear;
+	-ms-transition: all 0.4s  linear;
+	transition: all 0.4s  linear;
+}
+#wrapper p.change_link a:hover {
+	color: rgb(57, 191, 215);
+	background: rgb(247, 247, 247);
+	border: 1px solid rgb(74, 179, 198);
+}
+#wrapper p.change_link a:active{
+	position: relative;
+	top: 1px;
+}
+#register, 
+#login{
+	position: absolute;
+	top: 0px;
+	width: 88%;	
+	padding: 18px 6% 60px 6%;
+	margin: 20px 0 35px 0;
+	border: 1px solid rgba(147, 184, 189,0.8);
+	box-shadow: 0pt 2px 5px rgba(105, 108, 109,  0.7),	0px 0px 8px 5px rgba(208, 223, 226, 0.4) inset;
+	border-radius: 5px;
+	background-color:#f5f5f5f7; 
+}
+#register{	
+	z-index: 21;
+	opacity: 0;
+}
+#login{
+	z-index: 22;
+}
+#toregister:target ~ #wrapper #register,
+#tologin:target ~ #wrapper #login{
+	z-index: 22;
+	-webkit-animation-name: fadeInLeft;
+	-moz-animation-name: fadeInLeft;
+	-ms-animation-name: fadeInLeft;
+	-o-animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
+	-webkit-animation-delay: .1s;
+	-moz-animation-delay: .1s;
+	-o-animation-delay: .1s;
+	-ms-animation-delay: .1s;
+	animation-delay: .1s;
+}
+#toregister:target ~ #wrapper #login,
+#tologin:target ~ #wrapper #register{
+	-webkit-animation-name: fadeOutLeft;
+	-moz-animation-name: fadeOutLeft;
+	-ms-animation-name: fadeOutLeft;
+	-o-animation-name: fadeOutLeft;
+	animation-name: fadeOutLeft;
+}
+
+.animate{
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-timing-function: ease;
+	-webkit-animation-fill-mode: both;
+	
+	-moz-animation-duration: 0.5s;
+	-moz-animation-timing-function: ease;
+	-moz-animation-fill-mode: both;
+	
+	-o-animation-duration: 0.5s;
+	-o-animation-timing-function: ease;
+	-o-animation-fill-mode: both;
+	
+	-ms-animation-duration: 0.5s;
+	-ms-animation-timing-function: ease;
+	-ms-animation-fill-mode: both;
+	
+	animation-duration: 0.5s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}

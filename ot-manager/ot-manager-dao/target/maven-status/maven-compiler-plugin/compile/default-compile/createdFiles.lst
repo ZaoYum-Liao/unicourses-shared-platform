@@ -1,0 +1,5 @@
+com\ourTeam\manager\dao\CourseDetailMapper.class
+com\ourTeam\manager\dao\SchCourseMapper.class
+com\ourTeam\manager\dao\UserCourseMapper.class
+com\ourTeam\manager\dao\CourseInfoMapper.class
+com\ourTeam\manager\dao\UserMapper.class

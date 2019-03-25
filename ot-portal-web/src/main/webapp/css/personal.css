@@ -1,0 +1,438 @@
+/* Dash-table */
+#personal-page{
+    padding-top: 0;
+    background: #f5f5f5
+}
+#personal-container{
+    padding-top: 6em;
+    background-color: white;
+    padding-bottom: 12em;
+}
+#dashMenu li{
+    list-sytle:none;
+}
+.row h5 {
+    font-family: "Muli", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.row h3 {
+    font-size: 20px;
+    display : inline;
+}
+.row p{
+    font-size: 16px;
+}
+.dashMenu img{
+    width:20px;
+    height:23px;
+    margin-bottom: 4px;
+}
+/*导航栏图标*/
+#course-icon{
+    content:url(../images/personalcinfo-b.png);
+}
+#remark-icon{
+    content:url(../images/personalremark-b.png);
+}
+#info-icon{
+    content:url(../images/personalinfo-b.png);
+}
+#pass-icon{
+    content:url(../images/personalpass-b.png);
+}
+.user-dashboard-menu li.active #course-icon{
+     content:url(../images/personalcinfo-w.png);
+ }
+.user-dashboard-menu li.active #remark-icon{
+    content:url(../images/personalremark-w.png);
+}
+.user-dashboard-menu li.active #info-icon{
+    content:url(../images/personalinfo-w.png);
+}
+.user-dashboard-menu li.active #pass-icon{
+    content:url(../images/personalpass-w.png);
+}
+/*选课信息*/
+#dashmenu {
+    margin-top: 30px;
+}
+.user-dashboard-menu li {
+    margin-left: 15%;
+    margin-bottom: 5px;
+    width: 250px;
+}
+
+.user-dashboard-menu li.active a {
+    background: #e21737d4;
+    color: #fff;
+}
+
+.user-dashboard-menu li.active a:hover {
+    color: #fff;
+}
+
+.user-dashboard-menu li a {
+    padding: 10px;
+    font-size: 18px;
+    display: block;
+    font-weight: 600;
+    color: #555;
+}
+
+.user-dashboard-menu li a:hover {
+    color: #5672f9;
+}
+
+.user-dashboard-menu li a:hover span {
+    background: #5672f9;
+    color: #fff;
+}
+
+.user-dashboard-menu li a i {
+    margin-right: 5px;
+}
+
+.user-dashboard-menu li a span {
+    float: right;
+    background: #F4F7F9;
+    float: right;
+    font-size: 10px;
+    border-radius: 8px;
+    padding: 3px 8px;
+    color: #84919B;
+}
+
+.user-dashboard-profile {
+    text-align: center;
+}
+
+.user-dashboard-profile .profile-thumb img {
+    width: 130px;
+    height: auto;
+    border: 5px solid #F4F7F9;
+}
+
+.user-dashboard-profile h4 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-dashboard-profile .member-time {
+    color: #888;
+    font-size: 12px;
+    margin-bottom: 3px;
+}
+
+.user-dashboard-profile .btn-contact {
+    background: #1FCA6B;
+}
+
+.user-dashboard-profile .btn-offer {
+    background: #373C4D;
+}
+
+.dashboard-container .product-dashboard-table thead th {
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: .4px;
+}
+
+.dashboard-container .product-dashboard-table td {
+    vertical-align: middle;
+    padding: 40px 0;
+}
+
+.dashboard-container .product-dashboard-table .product-thumb {
+    width: 15%;
+}
+
+.dashboard-container .product-dashboard-table .product-details {
+    margin-left: 5%;
+    width: 45%;
+}
+
+.dashboard-container .product-dashboard-table .product-details span {
+    display: block;
+    font-size: 14px;
+    color: #848484;
+}
+
+.dashboard-container .product-dashboard-table .product-details span strong {
+    color: #666;
+    width: 26%;
+    display: inline-block;
+}
+
+.dashboard-container .product-dashboard-table .product-details .title {
+    font-size: 18px;
+    margin-bottom: 3%;
+}
+
+.dashboard-container .product-dashboard-table .product-details .status.active {
+    color: #59d659;
+}
+
+.dashboard-container .product-dashboard-table .product-category {
+    width: 15%;
+    text-align: center;
+}
+
+.dashboard-container .product-dashboard-table .action {
+    width: 20%;
+    text-align: center;
+}
+
+.dashboard-container .product-dashboard-table .action a {
+    width: 30px;
+    height: 30px;
+    border-radius: 40px;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+}
+
+.dashboard-container .product-dashboard-table .action a i {
+    line-height: 30px;
+}
+
+.dashboard-container .product-dashboard-table .action .list-inline .list-inline-item:not(:last-child) {
+    margin-right: 0px;
+}
+
+.dashboard-container .product-dashboard-table .action .edit {
+    background: #d65959;
+    text-align: center;
+}
+.dashboard-container .product-dashboard-table .action .edit img{
+    width:20px;
+    height:20px;
+    display:inline-table;
+    vertical-align: middle;
+    margin-top: 4px;
+}
+
+.dashboard-container .product-dashboard-table .action .view {
+    background: #50c6e9;
+}
+
+.dashboard-container .product-dashboard-table .action .delete {
+    background: #ff5252;
+}
+/*课程评价*/
+.remarkh3{
+    display: inline;
+    padding-right: 10px;
+}
+.remarkh6{
+    font-size:14px;
+    display: inline;
+}
+.remarktitle{
+    padding-bottom:5px;
+}
+#remarkspan{
+    font-size: 16px;
+    display:inline-block;
+    word-wrap:break-word;
+    white-space: nowrap;
+}
+.remark{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    font-size:1.2em;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+}
+
+.starRating{
+    height:25px;
+    margin-bottom:5px;
+}
+.starNum0{
+    font-size: 16px;
+    display:inline-block;
+    word-wrap:break-word;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+.starNum{
+    font-size: 16px;
+    display:inline-block;
+    word-wrap:break-word;
+    white-space: nowrap;
+    margin-left: 5px;
+}
+.starNum0{
+    margin-bottom: 3px;
+}
+.starRating .photo span,.starRating .photo0 span {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-right: 5px;
+    cursor: pointer;
+}
+.starRating .photo span:last-child,.starRating .photo0 span:last-child {
+    margin-right: 0px;
+}
+.starRating .photo span .nohigh,.starRating .photo0 span .nohigh {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    background-image: url("../images/star.png");
+}
+.starRating .photo span .high,.starRating .photo0 span .high {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    background-image: url("../images/star1.png");
+}
+.starRating .starNum {
+    font-size: 20px;
+    color: #de4414;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+.starRating .bottoms {
+    height: 54px;
+    border-top: 1px solid #d8d8d8;
+}
+.starRating .photo {
+    margin-top: 2px;
+}
+.starRating .bottoms a {
+    margin-bottom: 0;
+}
+.starRating .bottoms .garyBtn {
+    margin-right: 57px!important;
+}
+.starRating .bottoms a {
+    width: 130px;
+    height: 35px;
+    line-height: 35px;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 16px;
+    transition: all 0.2s linear;
+    margin: 16px 0 22px;
+    text-align: center;
+    cursor: pointer;
+}
+.garyBtn {
+    margin-right: 60px!important;
+    background-color: #e1e1e1;
+    color: #999999;
+}
+.blueBtn {
+    background-color: #1968b1;
+    color: #fff;
+}
+.blueBtn:hover {
+    background: #0e73d0;
+}
+/*修改密码*/
+.form-password tr{
+    margin-top: 10%;
+}
+.container-password{
+    margin-top: 10%;
+    margin-left: 25%;
+}
+#content2 h3, #content3 h3{
+    font-size: 20px;
+    color: #3d3d3d;
+    height: 90px;
+    line-height: 90px;
+    border-bottom: 1px solid #e0e0e0;
+}
+.form-password .input-control input{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    font-size:1.2em;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+}
+.error{
+    color: #dc5d00;
+    font-weight: normal;
+    margin-left: 10px;
+}
+input[type="text"]:focus{
+    border:1px solid #ff7496;
+}
+#btnpass,#btnreset{
+    border-radius: 5px;
+    background: #f3f4f4;
+}
+#btnpass:hover ,#btnreset:hover {
+    color: #ffffff;
+    background: #e73e59;
+    text-decoration: none;
+    box-shadow: 5px 2px 2px;
+}
+#btnpass{
+    margin-left: 95px;
+    width: 95px;
+}
+#btnreset{
+    margin-left: 31px;
+    width: 95px;
+}
+
+/*修改个人信息*/
+.input-control input[type="radio"]{
+    vertical-align:middle;
+    margin-top:-2px;
+    margin-bottom:1px;
+}
+#sex2{
+    margin-left:15px;
+}
+.form-information .input-control input{
+    -web-kit-appearance:none;
+    -moz-appearance: none;
+    text-align: center;
+    height: 25px;
+    font-size:16px;
+    border-radius:4px;
+    border:1px solid #c8cccf;
+    color:#6a6f77;
+}
+#btninfo,#btninforeset{
+    border-radius: 5px;
+    background: #f3f4f4;
+}
+#btninfo:hover ,#btninforeset:hover {
+    color: #ffffff;
+    background: #e73e59;
+    text-decoration: none;
+    box-shadow: 5px 2px 2px;
+}
+#btninfo{
+    margin-left: 79px;
+    width: 70px;
+}
+#btninforeset{
+    margin-left: 40px;
+    width: 70px;
+}

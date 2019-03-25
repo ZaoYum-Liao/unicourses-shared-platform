@@ -1,0 +1,3 @@
+com\ourTeam\sso\service\impl\JedisClusterClient.class
+com\ourTeam\sso\service\impl\SingleJedisPoolClient.class
+com\ourTeam\sso\service\impl\UserServiceImpl.class

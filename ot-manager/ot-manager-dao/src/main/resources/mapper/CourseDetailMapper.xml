@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ourTeam.manager.dao.CourseDetailMapper">
+  <resultMap id="BaseResultMap" type="com.ourTeam.manager.pojo.CourseDetail">
+    <id column="cour_code" jdbcType="VARCHAR" property="courCode" />
+    <result column="cour_detail" jdbcType="VARCHAR" property="courDetail" />
+    <result column="cour_image" jdbcType="VARCHAR" property="courImage" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    cour_code, cour_detail, cour_image
+  </sql>
+  <select id="selectByExample" parameterType="com.ourTeam.manager.pojo.CourseDetailExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from course_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from course_detail
+    where cour_code = #{courCode,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from course_detail
+    where cour_code = #{courCode,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.ourTeam.manager.pojo.CourseDetailExample">
+    delete from course_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.ourTeam.manager.pojo.CourseDetail">
+    insert into course_detail (cour_code, cour_detail, cour_image
+      )
+    values (#{courCode,jdbcType=VARCHAR}, #{courDetail,jdbcType=VARCHAR}, #{courImage,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.ourTeam.manager.pojo.CourseDetail">
+    insert into course_detail
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="courCode != null">
+        cour_code,
+      </if>
+      <if test="courDetail != null">
+        cour_detail,
+      </if>
+      <if test="courImage != null">
+        cour_image,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="courCode != null">
+        #{courCode,jdbcType=VARCHAR},
+      </if>
+      <if test="courDetail != null">
+        #{courDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="courImage != null">
+        #{courImage,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.ourTeam.manager.pojo.CourseDetailExample" resultType="java.lang.Long">
+    select count(*) from course_detail
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update course_detail
+    <set>
+      <if test="record.courCode != null">
+        cour_code = #{record.courCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.courDetail != null">
+        cour_detail = #{record.courDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="record.courImage != null">
+        cour_image = #{record.courImage,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update course_detail
+    set cour_code = #{record.courCode,jdbcType=VARCHAR},
+      cour_detail = #{record.courDetail,jdbcType=VARCHAR},
+      cour_image = #{record.courImage,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.ourTeam.manager.pojo.CourseDetail">
+    update course_detail
+    <set>
+      <if test="courDetail != null">
+        cour_detail = #{courDetail,jdbcType=VARCHAR},
+      </if>
+      <if test="courImage != null">
+        cour_image = #{courImage,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where cour_code = #{courCode,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.ourTeam.manager.pojo.CourseDetail">
+    update course_detail
+    set cour_detail = #{courDetail,jdbcType=VARCHAR},
+      cour_image = #{courImage,jdbcType=VARCHAR}
+    where cour_code = #{courCode,jdbcType=VARCHAR}
+  </update>
+</mapper>

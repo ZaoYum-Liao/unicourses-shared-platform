@@ -1,0 +1,313 @@
+/*-- //course_detail --*/
+/*-- single --*/
+.courses_box1 {
+    padding: 1% 0;
+    background-color: #f5f5f5;
+}
+#content{
+    background-color: white;
+    padding-top: 3em;
+}
+.detail h3{
+    color: #000000;
+    font-size: 2em;
+    margin: 0em 0 0.5em 0.1em;
+}
+.detail h5{
+    color: #dec689;
+    font-size: 2em;
+    margin: 0em 0 1em;
+}
+.detail p {
+    color: #464646;
+    font-size: 14px;
+    line-height: 2.2em;
+    margin-bottom: 2em;
+
+}
+.img-cour{
+    float: left;
+    width: 50%;
+    height:50%;
+}
+.info-cour{
+    float: left;
+    padding: 10px 20px 10px 20px;
+    width: 50%;
+    height:50%;
+    margin-bottom: 20px;
+}
+.course-enroll-info_course-info {
+    padding: 5px 10px 15px 20px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+}
+.info-cour div{
+    padding: 3px 1px 0px 10px;
+}
+
+.stu-name-info div{
+    float:initial;
+}
+.stu-name-info span{
+    font-size: 12px;
+    color: #a94442;
+    padding-left: 10px;
+}
+.enlist-cour1{
+    webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    height: 30%;
+    line-height: 200%;
+    font-size: 18px;
+    width: 40%;
+    background-color: #bcbb8b;
+    border-color: #bcbb8b;
+    text-align: center;
+    color: white;
+}.enlist-cour{
+     webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+     border-radius: 2px;
+     height: 30%;
+     line-height: 200%;
+     font-size: 18px;
+     width: 40%;
+     background-color: #ff7a3e;
+     border-color: #ff7a3e;
+     text-align: center;
+     color: white;
+ }
+
+.panel-body {
+    color: #777;
+    font-size: 0.95em;
+    line-height: 1.8em;
+}
+i.icon_3{
+    color:#5979CE;
+    margin-right: 10px;
+}
+.panel-group {
+    margin-bottom: 3em;
+}
+.panel-group .panel-default {
+    border: 1px solid #eff2f7;
+    box-shadow: none;
+    margin: 2em 0 0 0;
+}
+.panel-group .panel-heading {
+    padding: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.panel-group .panel-title {
+    line-height: 16px;
+}
+.panel-group .panel-title a {
+    display: block;
+    padding: 16px 44px 16px 18px;
+    font-weight: 400;
+    position: relative;
+}
+.panel-collapse {
+    padding: 0 16px;
+}
+.panel-group .panel-title a:after {
+    font-family: fontawesome;
+    content: "\f107";
+    position: absolute;
+    font-size: 16px;
+    right: 20px;
+    top: 50%;
+    margin-top: -8px;
+}
+.panel-group .panel-title .collapsed:after {
+    content: "\f106";
+}
+.
+.author-box-left{
+    float: left;
+    width: 10%;
+    margin-right: 2%;
+}
+.author-box-right {
+    /*overflow: hidden;*/
+    float: initial;
+    font-size: 18px;
+    border-bottom: 2px solid #e6e6e6;
+    margin-bottom: 20px;
+}
+.author-box-right span{
+    font-size: 1.1em;
+    margin-bottom: .8em;
+    border-bottom: 4px solid #dec689;
+    color: #dec689;
+}
+.author-box p{
+    font-size: 15px;
+}
+.author-box-right h4 a:hover{
+    color:#000;
+}
+
+.author-box {
+    margin-bottom: 3em;
+
+}
+.intro-cour-box{
+    background-color: #F5F8F4;
+    padding: 1px 20px 1px 20px;
+}
+.comment_section h4, .comment-form h4{
+    color: #dec689;
+    font-size: 2em;
+    margin-bottom: 1em;
+}
+.average-content{
+    margin-bottom: 14px;
+    height: 64px;
+}
+.average-content-score{
+    line-height: 64px;
+    font-size: 48px;
+    width: 73px;
+    color: #FF7A3E;
+    font-weight: bold;
+    margin-right: 15px;
+    float: left;
+}
+
+#average-content-star{
+    float: left;
+    width: 100px;
+    height: 25px;
+    background: url(/images/star_gray.png) no-repeat;
+    background-size: cover;
+    margin-top: 17px;
+}
+#over{
+    height:27px;
+    width: 100px;
+    background:url("/images/star_org.png") no-repeat;
+    background-size:cover;
+}
+.student-star{
+    float: left;
+    width: 76px;
+    height: 20px;
+    background: url(/images/star_gray.png) no-repeat;
+    background-size: cover;
+    margin-top: -2px;
+    margin-left: 10px;
+}
+.student-content-star{
+    height:20px;
+    width: 80px;
+    background:url("/images/star_org.png") no-repeat;
+    background-size:cover;
+}
+ul.comment-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul.children {
+    padding: 0;
+    margin: 0 0px 0 20px;
+    list-style: none;
+}
+ul.comment-list li{
+    margin-bottom:2em;
+}
+.author-box_left{
+    float:left;
+    width:8%;
+    margin-right: 2%;
+}
+.author-box_left img{
+    border-radius:100px;
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+    -o-border-radius:100px;
+}
+.author-box_right {
+    overflow: hidden;
+}
+.author-box_right h5{
+    margin-bottom:5px;
+}
+.author-box_right h5 a{
+    float: left;
+    color:#000;
+    font-size:20px;
+    text-decoration:none;
+}
+.author-box_right h5 a:hover{
+    color:#dec689;
+}
+.personBox_1{
+    border-bottom: 2px solid #e6e6e6;
+}
+span.m_1{
+    font-style:italic;
+    font-size:0.85em;
+    color:#CACACA;
+}
+.search-form .form-control, .comment-form .form-control, .contact_form .form-control, .search_form .form-control {
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-shadow: none;
+    color: #7a7c82;
+    display: block;
+    font-size: 13px;
+    height: 40px;
+    line-height: 1.42857;
+    margin-bottom: 15px;
+    padding: 6px 12px;
+    text-transform: none;
+    width: 100%;
+    resize:none;
+}
+.search-form .form-control, .comment-form .form-control, .contact_form .form-control {
+    margin-bottom: 25px;
+    border-color: #d8d8d9;
+}
+.search-form .form-control:hover, .comment-form .form-control:hover, .contact_form .form-control:hover {
+    border-color:#E21737;
+}
+.comment-form textarea {
+    min-height: 168px;
+}
+.form-submit {
+    width: 48%;
+    top: -66px;
+    position: relative;
+    display: inline-block;
+}
+.comment-form-left{
+    padding-left:0;
+}
+.comment-form-right{
+    padding-right:0;
+}
+.submit_1{
+    background-color:#dec689;
+    border:none;
+    outline:none !important;
+}
+.submit_1:hover{
+    background-color: #E21737 !important;
+}
+.detail img {
+    width: 100%;
+}
+.form-submit input#submit{
+    padding:10px 0;
+}
+/*-- //single --*/

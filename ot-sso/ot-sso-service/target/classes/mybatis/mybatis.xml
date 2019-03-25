@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--什么都不需要做，数据库的相关操作全部交由spring管理-->
+    <!--对mybatis配置拦截器，分页的时候用的-->
+    <plugins>
+        <plugin interceptor="com.github.pagehelper.PageHelper">
+        <!--配置方言，指定数据库-->
+            <property name="dialect" value="mysql"/>
+        </plugin>
+    </plugins>
+</configuration>
